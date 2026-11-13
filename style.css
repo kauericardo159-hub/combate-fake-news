@@ -1,0 +1,235 @@
+/* ==========================================================================
+   ESTILIZAÇÃO DA PÁGINA: Combate às Fake News
+   ========================================================================== */
+
+/* Reset básico para padronizar margens e espaçamentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definição de variáveis de cores do projeto */
+:root {
+    --cor-primaria: #0f172a;
+    --cor-destaque: #0284c7;
+    --cor-destaque-claro: #e0f2fe;
+    --cor-fundo: #f8fafc;
+    --cor-cartao: #ffffff;
+    --cor-texto: #334155;
+    --cor-titulo: #0f172a;
+    --cor-borda: #e2e8f0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Container centralizado para alinhar o conteúdo */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Cabeçalho
+   -------------------------------------------------------------------------- */
+.cabecalho {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 5px solid var(--cor-destaque);
+}
+
+.tag-destaque {
+    display: inline-block;
+    background-color: rgba(2, 132, 199, 0.3);
+    border: 1px solid #38bdf8;
+    color: #bae6fd;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cabecalho h1 {
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.subtitulo {
+    font-size: 1.15rem;
+    color: #cbd5e1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Seção de Introdução (Anatomia da Informação)
+   -------------------------------------------------------------------------- */
+.secao-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background-color: var(--cor-cartao);
+    padding: 40px;
+    margin-top: -30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    border: 1px solid var(--cor-borda);
+}
+
+.intro-texto {
+    flex: 1.2;
+}
+
+.intro-texto h2 {
+    color: var(--cor-titulo);
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.intro-texto p {
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+}
+
+.intro-imagem {
+    flex: 1;
+    text-align: center;
+}
+
+.intro-imagem img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   Seção de Cartões (Checklist de Verificação)
+   -------------------------------------------------------------------------- */
+.secao-passos {
+    margin-top: 60px;
+}
+
+.titulo-secao {
+    text-align: center;
+    color: var(--cor-titulo);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.descricao-secao {
+    text-align: center;
+    color: #64748b;
+    font-size: 1.05rem;
+    margin-bottom: 35px;
+}
+
+.grade-cartoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.cartao {
+    background-color: var(--cor-cartao);
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid var(--cor-borda);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* Efeito interativo ao passar o mouse ou tocar no cartão */
+.cartao:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(2, 132, 199, 0.12);
+    border-color: var(--cor-destaque);
+}
+
+.numero-passo {
+    display: inline-block;
+    background-color: var(--cor-destaque-claro);
+    color: var(--cor-destaque);
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.cartao h3 {
+    color: var(--cor-titulo);
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.cartao p {
+    font-size: 0.98rem;
+    color: var(--cor-texto);
+}
+
+/* --------------------------------------------------------------------------
+   Caixa de Alerta
+   -------------------------------------------------------------------------- */
+.secao-alerta {
+    margin: 50px 0;
+}
+
+.caixa-alerta {
+    background-color: #fef3c7;
+    border-left: 6px solid #f59e0b;
+    padding: 25px 30px;
+    border-radius: 12px;
+    color: #78350f;
+}
+
+.caixa-alerta h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #92400e;
+}
+
+/* --------------------------------------------------------------------------
+   Rodapé
+   -------------------------------------------------------------------------- */
+.rodape {
+    background-color: var(--cor-primaria);
+    color: #f8fafc;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.rodape-sub {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-top: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   Responsividade (Adaptação para telas de celular)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .cabecalho h1 {
+        font-size: 2rem;
+    }
+
+    .secao-intro {
+        flex-direction: column;
+        padding: 25px;
+        text-align: left;
+    }
+}
